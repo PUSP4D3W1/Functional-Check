@@ -68,7 +68,7 @@ const { default: newActions} = require('./actions/newActions');
 
 test('Fill checklist date in Google Form', async ({ page }) => {
     // Go to the Google Form
-    await page.goto('https://docs.google.com/forms/d/e/1FAIpQLSdUoJuxG1BTH3n3RGeewi97fOlVtPWrYZ4IlAr-lcGPL45vZg/viewform');
+    await page.goto('https://docs.google.com/forms/d/e/1FAIpQLSdDde_mG-kfFvHrOEOwM-0Q10topRc1wHsSctcOGbsjjLMYVg/viewform');
 
     // Click the outer wrapper to focus the input (if needed)
     await page.click('.rFrNMe.yqQS1.hatWr.zKHdkd .aCsJod.oJeWuf');
@@ -78,13 +78,17 @@ test('Fill checklist date in Google Form', async ({ page }) => {
     await dateInput.waitFor({ state: 'visible' });
 
     // Fill the date (Playwright's fill replaces existing text by default)
-    await dateInput.fill('2025-11-04');
+    const today = new Date().toISOString().split('T')[0];
+    await dateInput.fill(today);
 
     // Optional wait to simulate user pause
     await page.waitForTimeout(3000);
 
     // Assert the value was filled correctly
-    await expect(dateInput).toHaveValue('2025-11-04');
+    await expect(dateInput).toHaveValue(today);
+
+    // // select project
+    // const chooseProject = page.locator('#i32 .AB7Lab.Id5V1')
 
     //Optionally click the Submit button
     await page.getByRole('button', { name: 'Submit' }).click(); // or use locator if 'Submit' text is localized
