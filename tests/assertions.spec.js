@@ -68,7 +68,7 @@ const { default: newActions} = require('./actions/newActions');
 
 test('Fill checklist date in Google Form', async ({ page }) => {
     // Go to the Google Form
-    await page.goto('https://docs.google.com/forms/d/e/1FAIpQLSdUoJuxG1BTH3n3RGeewi97fOlVtPWrYZ4IlAr-lcGPL45vZg/viewform');
+    await page.goto('https://docs.google.com/forms/d/e/1FAIpQLSdDde_mG-kfFvHrOEOwM-0Q10topRc1wHsSctcOGbsjjLMYVg/viewform');
 
     // Click the outer wrapper to focus the input (if needed)
     await page.click('.rFrNMe.yqQS1.hatWr.zKHdkd .aCsJod.oJeWuf');
