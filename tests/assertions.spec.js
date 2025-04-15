@@ -66,7 +66,7 @@ const { default: newActions} = require('./actions/newActions');
 // });
 
 
-test('Fill checklist date in Google Form', async ({ page }) => {
+test('Fill functional check', async ({ page }) => {
     // Go to the Google Form
     await page.goto('https://docs.google.com/forms/d/e/1FAIpQLSdDde_mG-kfFvHrOEOwM-0Q10topRc1wHsSctcOGbsjjLMYVg/viewform');
 
@@ -87,8 +87,55 @@ test('Fill checklist date in Google Form', async ({ page }) => {
     // Assert the value was filled correctly
     await expect(dateInput).toHaveValue(today);
 
-    // // select project
-    // const chooseProject = page.locator('#i32 .AB7Lab.Id5V1')
+    //select project
+    const chooseProject = page.locator('#i12 > div.vd3tt > div');
+    await chooseProject.waitFor({ state: 'visible' });
+
+    await chooseProject.click();
+
+    //select Login Dashboard
+    const loginOK = page.locator('#i38 > div.vd3tt > div');
+    const loginNOK = page.locator('#i41 > div.vd3tt > div');
+    await loginOK.waitFor({ state: 'visible' });
+
+    await loginOK.click();
+
+    //select View Info Dashboard
+    const featureOK = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(4) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(2) > div > div > div.vd3tt > div').first();
+    const featureNOK = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(4) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(3) > div > div > div.vd3tt > div').first();
+    await featureOK.waitFor({ state: 'visible' });
+
+    await featureOK.click();
+    await featureOK.waitFor({ state: 'visible' });
+
+    //select View List Target
+    const featureOK_LT = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(5) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(2) > div > div > div.vd3tt > div').first();
+    const featureNOK_LT = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(5) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(3) > div > div > div.vd3tt > div').first();
+    // const questionBlock = page.locator('.o3Dpx >> nth=0'); // or a better unique selector for this section
+
+    // const featureOK_LT = questionBlock.locator('.vd3tt div').nth(0); // first option
+    // const featureNOK_LT = questionBlock.locator('.vd3tt div').nth(1); // second option
+
+    await featureOK_LT.waitFor({ state: 'visible' });
+
+    await featureOK_LT.click();
+    await featureOK_LT.waitFor({ state: 'visible' });
+
+    //select Create/Update Target
+    const featureOK_CUT = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(6) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(2) > div > div > div.vd3tt > div').first();
+    const featureNOK_CUT = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(6) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(3) > div > div > div.vd3tt > div').first();
+    await featureNOK_CUT.waitFor({ state: 'visible' });
+
+    await featureNOK_CUT.click();
+    await featureNOK_CUT.waitFor({ state: 'visible' });
+
+    //select View Case Management
+    const featureOK_CM = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(7) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(2) > div > div > div.vd3tt > div').first();
+    const featureNOK_CM = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(7) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(3) > div > div > div.vd3tt > div').first();
+    await featureOK_CM.waitFor({ state: 'visible' });
+
+    await featureOK_CM.click();
+    await featureOK_CM.waitFor({ state: 'visible' });
 
     //Optionally click the Submit button
     await page.getByRole('button', { name: 'Submit' }).click(); // or use locator if 'Submit' text is localized
