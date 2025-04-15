@@ -94,8 +94,8 @@ test('Fill functional check', async ({ page }) => {
     await chooseProject.click();
 
     //select Login Dashboard
-    const loginOK = page.locator('#i38 > div.vd3tt > div');
-    const loginNOK = page.locator('#i41 > div.vd3tt > div');
+    const loginOK = page.locator('#i41 > div.vd3tt > div');
+    const loginNOK = page.locator('#i44 > div.vd3tt > div');
     await loginOK.waitFor({ state: 'visible' });
 
     await loginOK.click();
