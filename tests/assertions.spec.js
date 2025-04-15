@@ -103,41 +103,58 @@ test('Fill functional check', async ({ page }) => {
     //select View Info Dashboard
     const featureOK = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(4) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(2) > div > div > div.vd3tt > div').first();
     const featureNOK = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(4) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(3) > div > div > div.vd3tt > div').first();
-    await featureOK.waitFor({ state: 'visible' });
-
+    //await featureOK.waitFor({ state: 'visible' });
     await featureOK.click();
     await featureOK.waitFor({ state: 'visible' });
 
     //select View List Target
     const featureOK_LT = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(5) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(2) > div > div > div.vd3tt > div').first();
     const featureNOK_LT = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(5) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(3) > div > div > div.vd3tt > div').first();
-    // const questionBlock = page.locator('.o3Dpx >> nth=0'); // or a better unique selector for this section
-
-    // const featureOK_LT = questionBlock.locator('.vd3tt div').nth(0); // first option
-    // const featureNOK_LT = questionBlock.locator('.vd3tt div').nth(1); // second option
-
-    await featureOK_LT.waitFor({ state: 'visible' });
-
+    //await featureOK_LT.waitFor({ state: 'visible' });
     await featureOK_LT.click();
     await featureOK_LT.waitFor({ state: 'visible' });
 
     //select Create/Update Target
     const featureOK_CUT = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(6) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(2) > div > div > div.vd3tt > div').first();
     const featureNOK_CUT = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(6) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(3) > div > div > div.vd3tt > div').first();
-    await featureNOK_CUT.waitFor({ state: 'visible' });
-
-    await featureNOK_CUT.click();
-    await featureNOK_CUT.waitFor({ state: 'visible' });
+    //await featureNOK_CUT.waitFor({ state: 'visible' });
+    await featureOK_CUT.click();
+    await featureOK_CUT.waitFor({ state: 'visible' });
 
     //select View Case Management
     const featureOK_CM = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(7) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(2) > div > div > div.vd3tt > div').first();
     const featureNOK_CM = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(7) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(3) > div > div > div.vd3tt > div').first();
-    await featureOK_CM.waitFor({ state: 'visible' });
-
+    //await featureOK_CM.waitFor({ state: 'visible' });
     await featureOK_CM.click();
     await featureOK_CM.waitFor({ state: 'visible' });
 
+    //Create-Update Case Management
+    const featureOK_CUCM = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(8) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(2) > div > div > div.vd3tt > div').first();
+    const featureNOK_CUCM = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(8) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(3) > div > div > div.vd3tt > div').first();
+    //await featureOK_CUCM.waitFor({ state: 'visible' });
+    await featureOK_CUCM.click();
+    await featureOK_CUCM.waitFor({ state: 'visible' });
+
+    //List Multitracking
+    const featureOK_LM = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(9) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(2) > div > div > div.vd3tt > div').first();
+    const featureNOK_LM = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(9) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(3) > div > div > div.vd3tt > div').first();
+    //await featureOK_CUCM.waitFor({ state: 'visible' });
+    await featureNOK_LM.click();
+    await featureNOK_LM.waitFor({ state: 'visible' });
+
+    //Create-Update Multitracking
+    const featureOK_CUM = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(10) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(2) > div > div > div.vd3tt > div').first();
+    const featureNOK_CUM = page.locator('#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(10) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(3) > div > div > div.vd3tt > div').first();
+    //await featureOK_CUCM.waitFor({ state: 'visible' });
+    await featureNOK_CUM.click();
+    await featureNOK_CUM.waitFor({ state: 'visible' });
+
+
     //Optionally click the Submit button
+    
     await page.getByRole('button', { name: 'Submit' }).click(); // or use locator if 'Submit' text is localized
+    const confirmationText = page.getByText('Your response has been recorded', { exact: true });
+    await expect(confirmationText).toBeVisible();
+    
 });
 
