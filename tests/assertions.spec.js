@@ -88,16 +88,28 @@ test('Fill functional check', async ({ page }) => {
     await expect(dateInput).toHaveValue(today);
 
     //select project
-    const chooseProject = page.locator('#i12 > div.vd3tt > div');
-    await chooseProject.waitFor({ state: 'visible' });
+    // const chooseProject = page.locator('#i12 > div.vd3tt > div');
+    // await chooseProject.waitFor({ state: 'visible' });
 
-    await chooseProject.click();
+    // await chooseProject.click();
 
+    const polBaliLabel = page.locator('#mG61Hd label', { hasText: 'Pol Bali' });
+    const radio = page.locator('#i12 input[type=radio]');
+
+    await polBaliLabel.click();
+    await polBaliLabel.waitFor({ state: 'visible' });
+    //await expect(radio).toBeChecked();
+    
     //select Login Dashboard
+    //await page.locator('text=Login Dashboard').waitFor();
+    //const loginOK = page.locator('.AB7Lab.Id5V1', { hasText: 'OK' });
+    //const loginOK = page.locator('.docssharedWizToggleLabeledContainer.ajBQVb .AB7Lab.Id5V1', { hasText: 'OK' });
+    //const container = page.locator('.docssharedWizToggleLabeledContainer.ajBQVb');
+    //const loginOK = container.locator('.AB7Lab.Id5V1', { hasText: 'OK' });
     const loginOK = page.locator('#i41 > div.vd3tt > div');
     const loginNOK = page.locator('#i44 > div.vd3tt > div');
-    await loginOK.waitFor({ state: 'visible' });
-
+    //await loginOK.waitFor({ state: 'visible' });
+    
     await loginOK.click();
 
     //select View Info Dashboard

@@ -1,14 +1,14 @@
 export default class fcheckLocator {
     datepickerBox = ".rFrNMe.yqQS1.hatWr.zKHdkd .aCsJod.oJeWuf";
     dateInput = "#mG61Hd .whsOnd.zHQkBf";
-    projectBali = "#i12 > div.vd3tt > div";
-    projectJabar = "#i15 > div.vd3tt > div";
-    projectDKI = "#i18 > div.vd3tt > div";
-    projectKJBR = "#i21 > div.vd3tt > div";
-    projectBIK = "#i24 > div.vd3tt > div";
-    projectLampung = "#i27 > div.vd3tt > div";
-    projectSulut = "#i30 > div.vd3tt > div";
-    projectKJA = "#i33 > div.vd3tt > div";
+    projectBali = "#mG61Hd label', { hasText: 'Pol Bali' }";
+    projectJabar = "#mG61Hd label', { hasText: 'Pol Jabar' }";
+    projectDKI = "#mG61Hd label', { hasText: 'KJT DKI' }";
+    projectKJBR = "#mG61Hd label', { hasText: 'KJT Jabar' }";
+    projectBIK = "#mG61Hd label', { hasText: 'Mabes BIK' }";
+    projectLampung = "#mG61Hd label', { hasText: 'Pol Lampung' }";
+    projectSulut = "#mG61Hd label', { hasText: 'Pol Sulut' }";
+    projectKJA = "#mG61Hd label', { hasText: 'KJA' }";
     loginOK = "#i38 > div.vd3tt > div";
     loginNOK = "#i41 > div.vd3tt > div";
     featureOKDash = "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(4) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(2) > div > div > div.vd3tt > div";
@@ -26,6 +26,7 @@ export default class fcheckLocator {
     featureOKCUMTracking = "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(10) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(2) > div > div > div.vd3tt > div";
     featureNOKCUMTracking = "#mG61Hd > div.RH5hzf.RLS9Fe > div > div.o3Dpx > div:nth-child(10) > div > div > div.e12QUd > div > div.xOMX8e > div > div.lLfZXe.fnxRtf.EzyPc > span > div:nth-child(3) > div > div > div.vd3tt > div";
     
+
 
     
 }
